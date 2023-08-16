@@ -11,7 +11,7 @@ class InfStorage : JavaPlugin() {
     private val materialKey = NamespacedKey(this, "item-material")
     private val amountKey = NamespacedKey(this, "item-amount")
 
-    val storageItem = InfStorageItem(storageItemKey)
+    private val storageItem = InfStorageItem(storageItemKey)
 
     override fun onEnable() {
         val pluginManager = server.pluginManager
