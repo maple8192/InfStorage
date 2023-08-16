@@ -7,11 +7,8 @@ import org.bukkit.NamespacedKey
 import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.meta.ItemMeta
 import org.bukkit.persistence.PersistentDataType
-import org.bukkit.plugin.Plugin
 
-class InfStorageItem(plugin: Plugin) {
-    private val storageItemKey = NamespacedKey(plugin, "storage-item")
-
+class InfStorageItem(private val storageItemKey: NamespacedKey) {
     fun create() : ItemStack {
         val chest = ItemStack(Material.CHEST).also {
             it.itemMeta = setupMeta(it.itemMeta)
