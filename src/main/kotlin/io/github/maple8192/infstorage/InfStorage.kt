@@ -16,6 +16,6 @@ class InfStorage : JavaPlugin() {
     override fun onEnable() {
         val pluginManager = server.pluginManager
         pluginManager.registerEvents(CraftingListener(storageItem), this)
-        pluginManager.registerEvents(BlockListener(storageItemKey, materialKey, amountKey), this)
+        pluginManager.registerEvents(BlockListener(storageItemKey, materialKey, amountKey, storageItem), this)
     }
 }
